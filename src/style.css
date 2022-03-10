@@ -1,0 +1,10 @@
+
+#topBar {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid black;
+}
+
+.topBarButtons {
+    text-align: center;
+}
