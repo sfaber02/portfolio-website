@@ -1,10 +1,20 @@
 
-#topBar {
-    display: flex;
-    justify-content: space-evenly;
-    border: 1px solid black;
+html, body {
+    background-color: #2a2d34;
+    height: 100%;
+    margin: 0px;
 }
 
-.topBarButtons {
-    text-align: center;
+
+
+#landingPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    position: absolute;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid white;
 }
