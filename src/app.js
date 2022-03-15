@@ -12,13 +12,13 @@ import { Experience } from "./experience.js";
 import { Projects } from "./projects.js";
 import { Skills } from "./skills.js"; 
 
-const App = () => {
 
+const App = () => {
     return (
         <div id="App">
             <Routes>
                 <Route path='/' element={<LandingPage />} />
-                <Route path='/projects' element={<Projects />} />
+                <Route path='/projectsTest' element={<projectsTest />} />
                 <Route path='/skills' element={<Skills />} />
                 <Route path='/experience' element={<Experience />} />
                 <Route path='/contact' element={<Contact />} />
