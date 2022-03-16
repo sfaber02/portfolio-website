@@ -30,22 +30,21 @@ const LandingPage = () => {
         leave: {x: 100, y: -800, opacity: 0, config: config.molasses },
     });
 
-    /** Navigation Button Event Handlers */
-    const handleProjectsClick = () => {
+    /** 
+     * Navigation Button Event Handler
+     * Triggers button leave animation 
+    */
+    const handleClick = ({ target }) => {
+        console.log (target.id);
         setVisible(false);
-        navigate('/projectsTest');
-    }
-
-    const handleContactClick = () => {
-        navigate('/contact');
-    }
-
-    const handleExperienceClick = () => {
-        navigate('/experience');
-    }
-
-    const handleSkillsClick = () => {
-        navigate('/skills');
+        let start = Date.now();
+        let timer = setInterval(() => {
+            let elapsed = Date.now() - start;
+            if (elapsed > 2000) {
+                clearInterval(timer);
+                navigate(`/${target.id}`);
+            }
+        }, 20)
     }
 
     
@@ -53,54 +52,50 @@ const LandingPage = () => {
         <>
             <div id='landingPage'>
                 {transition((style, item) => {
-                    return (
+                    return ( item ?
                         <animated.div style={style} className='item'>
                             <h1>Shawn Faber</h1>
-                        </animated.div>
+                        </animated.div> : ''
                     )
                 })}
                 {transition2((style, item) => {
-                    return (
+                    return ( item ?
                         <animated.div style={style} className='item'>
                             <h1>Digital Resume</h1>
-                        </animated.div>
+                        </animated.div> : ''
                     )
                 })}
                 {transition3((style, item) => {
-                    return (
+                    return (item ?
                         <animated.div style={style} className='item'>
-                            <button onClick={handleProjectsClick}>Projects</button>
-                        </animated.div>
+                            <button id="projects" onClick={handleClick}>Projects</button>
+                        </animated.div> : ''
                     )
                 })}
                 {transition4((style, item) => {
-                    return (
+                    return (item ?
                         <animated.div style={style} className='item'>
-                            <button onClick={handleSkillsClick}>Skills</button>
-                        </animated.div>
+                            <button id='skills' onClick={handleClick}>Skills</button>
+                        </animated.div> : ''
                     )
                 })}
                 {transition((style, item) => {
-                    return (
+                    return ( item ?
                         <animated.div style={style} className='item'>
-                            <button onClick={handleExperienceClick}>Experience</button>
-                        </animated.div>
+                            <button id='experience' onClick={handleClick}>Experience</button>
+                        </animated.div> : ''
                     )
                 })}
                 {transition3((style, item) => {
-                    return (
+                    return (item ?
                         <animated.div style={style} className='item'>
-                            <button onClick={handleContactClick}>Contact</button>
-                        </animated.div>
+                            <button id='contact' onClick={handleClick}>Contact</button>
+                        </animated.div> : ''
                     )
                 })}
             </div>
         </>
     );
-
-    const ProjectsTest = () => {
-        return <h1>Projects</h1>;
-    }
 }
 
 
