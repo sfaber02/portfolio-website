@@ -50,7 +50,7 @@ const LandingPage = () => {
     
     return (
         <>
-            <div id='landingPage'>
+            <div id='landingPage' className='mainPageContainers'>
                 {transition((style, item) => {
                     return ( item ?
                         <animated.div style={style} className='item'>
