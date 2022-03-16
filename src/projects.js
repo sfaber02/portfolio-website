@@ -13,8 +13,7 @@ const Projects = () => {
         leave: {x: 100, y: -800, opacity: 0, config: config.molasses },
     });
 
-    const handleClick = ({ target }) => {
-        console.log (target.id);
+    const handleClick = () => {
         setVisible(false);
         let start = Date.now();
         let timer = setInterval(() => {
