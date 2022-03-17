@@ -18,7 +18,7 @@ const Projects = () => {
         let start = Date.now();
         let timer = setInterval(() => {
             let elapsed = Date.now() - start;
-            if (elapsed > 2000) {
+            if (elapsed > 500) {
                 clearInterval(timer);
                 navigate('/');
             }

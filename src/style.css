@@ -1,20 +1,69 @@
+/** Define custom color names */
+:root {
+    --gunmetal: #2a2d34ff;
+    --carolina-blue: #009ddcff;
+    --orange-red: #f26430ff;
+    --dark-blue-gray: #6761a8ff;
+    --green-cyan: #009b72ff;
+}
 
 html, body {
-    background-color: #2a2d34;
+    background-color: var(--carolina-blue);
     height: 100%;
     margin: 0px;
 }
 
-
-
 .mainPageContainers {
+    /* transform: skew(300deg, 1deg); */
     height: 100%;
     width: 100%;
     display: flex;
     box-sizing: border-box;
     position: absolute;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     border: 5px solid white;
+}
+
+#landingPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content:flex-start;
+       
+}
+
+#landingName {
+    transform: rotate(.75turn);
+}
+
+#landingTitle {
+    transform: rotate(.25turn);
+}
+
+.buttons {
+    background-color: var(--green-cyan);
+    width: 500px;
+    border: none;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    font-family: "impact";
+    font-size: 100%;
+    border-radius: 2%;
+    box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.buttons:hover {
+    background-color: var(--gunmetal);
+    color: var(--orange-red);
+    /* padding: 30px; */
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--gunmetal);
+    margin: 0;
+    /* transform: rotate(0.5turn); */
 }
