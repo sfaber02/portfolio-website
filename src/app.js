@@ -1,5 +1,5 @@
 import "./style.css";
-import React from 'react';
+import React, { useState} from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 
@@ -14,10 +14,14 @@ import { Skills } from "./skills.js";
 
 
 const App = () => {
+    const [firstLoad, setFirstLoad] = useState(true);
+
+    const toggleFirstLoad = () => setFirstLoad(false);
+
     return (
         <div id="App">
             <Routes>
-                <Route path='/' element={<LandingPage />} />
+                <Route path='/' element={<LandingPage firstLoad={firstLoad} toggleFirstLoad={toggleFirstLoad} />} />
                 <Route path='/projects' element={<Projects />} />
                 <Route path='/skills' element={<Skills />} />
                 <Route path='/experience' element={<Experience />} />

@@ -8,7 +8,7 @@
 }
 
 html, body {
-    background-color: var(--carolina-blue);
+    background-color: var(--gunmetal);
     height: 100%;
     margin: 0px;
 }
@@ -43,7 +43,7 @@ html, body {
 }
 
 .buttons {
-    background-color: var(--green-cyan);
+    background-color: var(--dark-blue-gray);
     width: 500px;
     border: none;
     color: black;
@@ -56,14 +56,14 @@ html, body {
 }
 
 .buttons:hover {
-    background-color: var(--gunmetal);
+    /* background-color: var(--gunmetal); */
     color: var(--orange-red);
     /* padding: 30px; */
 }
 
 h1 {
     font-size: 60px;
-    color: var(--gunmetal);
+    color: var(--orange-red);
     margin: 0;
     /* transform: rotate(0.5turn); */
 }

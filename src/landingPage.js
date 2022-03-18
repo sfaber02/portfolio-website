@@ -1,44 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransition, animated, config} from 'react-spring';
+import { styleOb, styleObFromLefttoRight } from './styleClass.js';
 
-
-const LandingPage = () => {
+const LandingPage = ({firstLoad, toggleFirstLoad}) => {
     const navigate = useNavigate();
     const [visible, setVisible] = useState(true);
-
-    /** Class to generate random style objects for animations */
-    class styleOb {
-        constructor() {
-            this.from = {
-                transform: 'rotate(0.5turn)', 
-                x: Math.floor(Math.random() * 1600) - 800,
-                y: Math.floor(Math.random() * 1600) - 800,
-                opacity: 0, config: config.molasses
-            };
-            this.enter = {
-                transform: 'rotate(0turn)',
-                x: 0,
-                y: 0,
-                opacity: 1,
-                config: config.molasses
-            };
-            this.leave = {
-                transform: 'rotate(0.5turn)',
-                x: Math.floor(Math.random() * 1600) - 800,
-                y: Math.floor(Math.random() * 1600) - 800,
-                opacity: 0,
-                config: config.molasses 
-            };
-        }
-    }
+    
+    console.log (firstLoad, toggleFirstLoad);
     /** All the transitions for the various elements on the landing page */
-    const transition1 = useTransition(visible, new styleOb());
-    const transition2 = useTransition(visible, new styleOb());
-    const transition3 = useTransition(visible, new styleOb());
-    const transition4 = useTransition(visible, new styleOb());
-    const transition5 = useTransition(visible, new styleOb());
-    const transition6 = useTransition(visible, new styleOb());
+    const transition1 = useTransition(visible, firstLoad ? new styleOb() : new styleObFromLefttoRight());
+    const transition2 = useTransition(visible, firstLoad ? new styleOb() : new styleObFromLefttoRight());
+    const transition3 = useTransition(visible, firstLoad ? new styleOb() : new styleObFromLefttoRight());
+    const transition4 = useTransition(visible, firstLoad ? new styleOb() : new styleObFromLefttoRight());
+    const transition5 = useTransition(visible, firstLoad ? new styleOb() : new styleObFromLefttoRight());
+    const transition6 = useTransition(visible, firstLoad ? new styleOb() : new styleObFromLefttoRight());
     
     
     /** 
@@ -47,10 +23,11 @@ const LandingPage = () => {
     */
     const handleClick = ({ target }) => {
         setVisible(false);
+        toggleFirstLoad();
         const start = Date.now();
         let timer = setInterval(() => {
             let elapsed = Date.now() - start;
-            if (elapsed > 2000) {
+            if (elapsed > 500) {
                 clearInterval(timer);
                 navigate(`/${target.id}`);
             }
