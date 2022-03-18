@@ -5,4 +5,6 @@ This is mostly an exercise in practicing react-spring and react router by making
 
 
 ## Todo
-- refactor all those transitions into a class
+[] add the content
+[] find a decent looking color scheme
+

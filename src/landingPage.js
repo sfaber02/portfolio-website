@@ -27,7 +27,7 @@ const LandingPage = ({firstLoad, toggleFirstLoad}) => {
         const start = Date.now();
         let timer = setInterval(() => {
             let elapsed = Date.now() - start;
-            if (elapsed > 500) {
+            if (elapsed > 400) {
                 clearInterval(timer);
                 navigate(`/${target.id}`);
             }
