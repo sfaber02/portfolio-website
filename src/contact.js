@@ -27,7 +27,7 @@ const Contact = () => {
     }
 
     return (
-        <div id="contact" className='mainPageContainers'>
+        <div id="contactPage" className='mainPageContainers'>
             <h1>Contact</h1>
             {transition((style, item) => {
                     return ( item ?

@@ -27,7 +27,7 @@ const Skills = () => {
     }
 
     return (
-        <div id="contact" className='mainPageContainers'>
+        <div id="skillsPage" className='mainPageContainers'>
             <h1>Skills</h1>
             {transition((style, item) => {
                     return ( item ?

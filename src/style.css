@@ -5,65 +5,192 @@
     --orange-red: #f26430ff;
     --dark-blue-gray: #6761a8ff;
     --green-cyan: #009b72ff;
+
+    --white: #ffffffff;
+    --rich-black-fogra-29: #00171fff;
+    --prussian-blue: #003459ff;
+    --celadon-blue: #007ea7ff;
+    --carolina-blue: #00a8e8ff;
+
+    --theFont : "Impact" 
 }
 
-html, body {
-    background-color: var(--gunmetal);
+html, body, #root, #App {
+    background-color: var(--white);
     height: 100%;
     margin: 0px;
+    overflow: hidden;
 }
 
+
 .mainPageContainers {
-    /* transform: skew(300deg, 1deg); */
     height: 100%;
     width: 100%;
-    display: flex;
-    box-sizing: border-box;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border: 5px solid white;
 }
 
 #landingPage {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content:flex-start;
-       
+    height: 100%;
+    width: 100%;
+    
+}
+
+
+#landingButtons {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 4% 32% 20% 44%;
+    grid-template-rows: 30% 30% 40%;
+    /* border: 1px solid yellow; */
 }
 
 #landingName {
-    transform: rotate(.75turn);
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background-color: var(--green-cyan);
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 #landingTitle {
-    transform: rotate(.25turn);
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    background-color: var(--prussian-blue);
+    width: 95%;
+    margin-left: 5%;
+    height: 100%;
+    border: none;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
 }
 
-.buttons {
+.landingP {
+    font-family: var(--theFont);
+    color: var(--dark-blue-gray)
+}
+
+#landingP1 {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    font-size: 12vw;
+    margin: 0;
+}
+
+#landingP2 {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    font-size: 12vw;
+    margin: 0;
+}
+
+
+
+#projects {
+    grid-column: 3 / 5;
+    grid-row: 1 / 3;
+    background-color: var(--green-cyan);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: black;
+}
+
+#projectsP {
+    /* border: 1px solid white; */
+    margin: auto;
+    font-size: 30px;
+    font-family: var(--theFont);
+    color: var(--gunmetal);
+}
+
+#skills {
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    background-color: var(--orange-red);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    border: none;
+    color: black;
+}
+
+#skillsP {
+    margin: auto;
+    font-size: 30px;
+    font-family: var(--theFont);
+    color: var(--green-cyan); 
+}
+
+#experience {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     background-color: var(--dark-blue-gray);
-    width: 500px;
+    display: flex;
+    width: 90%;
+    margin-bottom: 0px;
+    margin-top: 5%;
+    margin-left: 5%;
+    color: black;
+}
+
+#experienceP {
+    margin: auto;
+    font-size: 30px;
+    font-family: var(--theFont);
+    color: var(--orange-red);
+}
+
+#contact {
+    /* box-sizing: border-box; */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color: var(--carolina-blue);
+    display: flex;
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    border: none;
+    color: black;
+    /* border-radius: 20px; */
+}
+
+#contactP {
+    margin: auto;
+    font-size: 30px;
+    font-family: var(--theFont);
+    color: var(--white);
+}
+
+/* .item:hover {
+    background-color: var(--green-cyan);
+    color: var(--gunmetal);
+} */
+
+.buttons {
+    background-color: var(--carolina-blue);
+    display: border-box;
+    width: 100%;
+    height: 100%;
     border: none;
     color: black;
     padding: 20px;
-    margin: 10px;
-    font-family: "impact";
+    margin: 0px 0px ;
+    /* font-family: "impact"; */
     font-size: 100%;
     border-radius: 2%;
     box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.buttons:hover {
-    /* background-color: var(--gunmetal); */
-    color: var(--orange-red);
-    /* padding: 30px; */
-}
 
-h1 {
+
+#nameHeader {
     font-size: 60px;
-    color: var(--orange-red);
+    /* overflow:scroll; */
+    color: var(--dark-blue-gray);
     margin: 0;
-    /* transform: rotate(0.5turn); */
+    transform: rotate(0.25turn);
 }

@@ -38,50 +38,47 @@ const LandingPage = ({firstLoad, toggleFirstLoad}) => {
     return (
         <>
             <div id='landingPage' className='mainPageContainers'>
-                <div id='landingName'>
+                <div id='landingButtons'>
                     {transition1((style, item) => {
                         return ( item ?
-                            <animated.div style={style} className='item'>
-                                <h1>Shawn Faber</h1>
+                            <animated.div style={style} id='landingName' className='item'>
+                                <h1 id='nameHeader'></h1>
                             </animated.div> : ''
                         )
-                    })}
-                </div>                
-                <div id='landingButtons'>
+                    })}                
                     {transition3((style, item) => {
                         return (item ?
-                            <animated.div style={style} className='item'>
-                                <button id="projects" className='buttons' onClick={handleClick}>Projects</button>
+                            <animated.div style={style} className='item' id="projects" onClick={handleClick}>
+                                <p id="projectsP">Projects</p>
                             </animated.div> : ''
                         )
                     })}
                     {transition4((style, item) => {
                         return (item ?
-                            <animated.div style={style} className='item'>
-                                <button id='skills' className='buttons' onClick={handleClick}>Skills</button>
+                            <animated.div style={style} className='item' id="skills" onClick={handleClick}>
+                                <p id="skillsP">Skills</p>
                             </animated.div> : ''
                         )
                     })}
                     {transition5((style, item) => {
                         return ( item ?
-                            <animated.div style={style} className='item'>
-                                <button id='experience' className='buttons' onClick={handleClick}>Experience</button>
+                            <animated.div style={style} className='item' id="experience"  onClick={handleClick} >
+                                <p id="experienceP">Experience</p>
                             </animated.div> : ''
                         )
                     })}
                     {transition6((style, item) => {
                         return (item ?
-                            <animated.div style={style} className='item'>
-                                <button id='contact' className='buttons' onClick={handleClick}>Contact</button>
+                            <animated.div style={style} className='item' id="contact" onClick={handleClick}>
+                                <p id="contactP">Contact</p>  
                             </animated.div> : ''
                         )
                     })}
-                </div>
-                <div id='landingTitle'>
                     {transition2((style, item) => {
                         return ( item ?
-                            <animated.div style={style} className='item'>
-                                <h1>Digital Resume</h1>
+                            <animated.div style={style} className='item' id='landingTitle'>
+                                <p id="landingP1" className="landingP">SHAWN</p>
+                                <p id="landingP2" className="landingP">FABER</p>
                             </animated.div> : ''
                         )
                     })}

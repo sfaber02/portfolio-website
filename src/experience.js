@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransition, animated, config} from 'react-spring';
+import { styleObFromLefttoRight } from './styleClass';
 
 
 const Experience = () => {
@@ -8,11 +9,7 @@ const Experience = () => {
     const [visible, setVisible] = useState(true);
     const navigate = useNavigate();
 
-    const transition = useTransition(visible, {
-        from: {x: 800, y: 0, opacity: 0, config: config.molasses},
-        enter: {x: 0, y: 0, opacity: 1, config: config.molasses},
-        leave: {x: -800, y: 0, opacity: 0, config: config.molasses },
-    });
+    const transition = useTransition(visible, new styleObFromLefttoRight());
 
     const handleClick = () => {
         setVisible(false);
@@ -27,7 +24,7 @@ const Experience = () => {
     }
 
     return (
-        <div id="experience" className='mainPageContainers'>
+        <div id="experiencePage" className='mainPageContainers'>
             <h1>Experience</h1>
             {transition((style, item) => {
                     return ( item ?
