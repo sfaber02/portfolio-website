@@ -29,7 +29,7 @@ const LandingPage = ({firstLoad, toggleFirstLoad}) => {
             let elapsed = Date.now() - start;
             if (elapsed > 400) {
                 clearInterval(timer);
-                navigate(`/${target.id}`);
+                navigate(`/${target.id[target.id.length - 1] === 'P' ? target.id.slice(0, target.id.length - 1) : target.id}`);
             }
         }, 20)
     }
@@ -42,7 +42,7 @@ const LandingPage = ({firstLoad, toggleFirstLoad}) => {
                     {transition1((style, item) => {
                         return ( item ?
                             <animated.div style={style} id='landingName' className='item'>
-                                <h1 id='nameHeader'></h1>
+
                             </animated.div> : ''
                         )
                     })}                
@@ -77,8 +77,8 @@ const LandingPage = ({firstLoad, toggleFirstLoad}) => {
                     {transition2((style, item) => {
                         return ( item ?
                             <animated.div style={style} className='item' id='landingTitle'>
-                                <p id="landingP1" className="landingP">SHAWN</p>
-                                <p id="landingP2" className="landingP">FABER</p>
+                                <p id="landing1P" className="landingP">SHAWN</p>
+                                <p id="landing2P" className="landingP">FABER</p>
                             </animated.div> : ''
                         )
                     })}

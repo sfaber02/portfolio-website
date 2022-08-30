@@ -8,14 +8,14 @@ class styleOb {
             transform: `rotate(${Math.random() * 2 - 1}turn)`, 
             x: Math.floor(Math.random() * 1600) - 800,
             y: Math.floor(Math.random() * 1600) - 800,
-            opacity: 0, config: config.default
+            opacity: 0, config: config.molasses
         };
         this.enter = {
             transform: 'rotate(0turn)',
             x: 0,
             y: 0,
             opacity: 1,
-            config: config.default
+            config: config.molasses
         };
         this.leave = {
             transform: 'rotate(0.05turn)',
@@ -40,7 +40,7 @@ class styleObFromLefttoRight {
             x: 0,
             y: 0,
             opacity: 1,
-            config: config.default
+            config: config.molasses,
         };
         this.leave = {
             transform: 'rotate(0.05turn)',
