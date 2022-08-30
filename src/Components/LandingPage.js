@@ -3,6 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import { useTransition, animated, config} from 'react-spring';
 import { styleOb, styleObFromLefttoRight } from '../Classes/styleClass.js';
 
+import '../Styles/components/landing.scss';
+
 const LandingPage = ({firstLoad, toggleFirstLoad}) => {
     const navigate = useNavigate();
     const [visible, setVisible] = useState(true);
