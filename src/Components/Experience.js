@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTransition, animated, config} from 'react-spring';
-import { styleObFromLefttoRight } from './styleClass';
+import { styleObFromLefttoRight } from '../Classes/styleClass.js';
 
 
 const Experience = () => {

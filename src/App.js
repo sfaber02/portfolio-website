@@ -1,4 +1,4 @@
-import "./style.css";
+import "./Styles/style.css";
 import React, { useState} from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
@@ -6,11 +6,11 @@ import { Route, Routes, Link } from 'react-router-dom';
 /**
  * The various pages of my resume
  */
-import { LandingPage } from "./landingPage";
-import { Contact } from './contact.js';
-import { Experience } from "./experience.js";
-import { Projects } from "./projects.js";
-import { Skills } from "./skills.js"; 
+import { LandingPage } from "./Components/LandingPage";
+import { Contact } from './Components/Contact.js';
+import { Experience } from "./Components/Experience.js";
+import { Projects } from "./Components/Projects.js";
+import { Skills } from "./Components/Skills.js"; 
 
 
 const App = () => {
