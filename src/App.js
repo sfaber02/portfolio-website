@@ -19,7 +19,7 @@ const App = () => {
     const toggleFirstLoad = () => setFirstLoad(false);
 
     return (
-        <div id="App">
+        <div className="App">
             <Routes>
                 <Route path='/' element={<LandingPage firstLoad={firstLoad} toggleFirstLoad={toggleFirstLoad} />} />
                 <Route path='/projects' element={<Projects />} />
