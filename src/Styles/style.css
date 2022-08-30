@@ -12,16 +12,33 @@
     --celadon-blue: #007ea7ff;
     --carolina-blue: #00a8e8ff;
 
-    --theFont : "Impact" 
+    --theFont: "Impact";
+
+    /* MAIN COLOR VARS */
+    --background: var(--celadon-blue);
+    --buttons: var(--carolina-blue);
+    --sidebar: var(--green-cyan);
+    --namePane: var(--carolina-blue);
+    --namePaneFontColor: var(--white);
+    --projectsPane: var(--prussian-blue);
+    --projectsPaneFontColor: var(--gunmetal);
+    --skillsPane: var(--orange-red);
+    --skillsPaneFontColor: var(--green-cyan);
+    --experiencePane:var(--dark-blue-gray);
+    --experiencePaneFontColor: var(--orange-red);
+    --contactPane: var(--carolina-blue);
+    --contactPaneFontColor: var(--white);
 }
 
-html, body, #root, #App {
-    background-color: var(--celadon-blue);
+html,
+body,
+#root,
+#App {
+    background-color: var(--background);
     height: 100%;
     margin: 0px;
     overflow: hidden;
 }
-
 
 .mainPageContainers {
     height: 100%;
@@ -31,7 +48,6 @@ html, body, #root, #App {
 #landingPage {
     height: 100%;
     width: 100%;
-    
 }
 
 #landingButtons {
@@ -45,7 +61,7 @@ html, body, #root, #App {
 #landingName {
     grid-column: 1 / 2;
     grid-row: 1 / 4;
-    background-color: var(--green-cyan);
+    background-color: var(--sidebar);
     width: 100%;
     height: 100%;
     border: none;
@@ -54,7 +70,7 @@ html, body, #root, #App {
 #landingTitle {
     grid-column: 4 / 5;
     grid-row: 3 / 4;
-    background-color: var(--carolina-blue);
+    background-color: var(--namePane);
     width: 95%;
     margin-left: 5%;
     height: 100%;
@@ -66,7 +82,7 @@ html, body, #root, #App {
 
 .landingP {
     font-family: var(--theFont);
-    color: var(--white)
+    color: var(--namePaneFontColor);
 }
 
 #landing1P {
@@ -85,12 +101,10 @@ html, body, #root, #App {
     margin: 0;
 }
 
-
-
 #projects {
     grid-column: 3 / 5;
     grid-row: 1 / 3;
-    background-color: var(--prussian-blue);
+    background-color: var(--projectsPane);
     display: flex;
     width: 100%;
     height: 100%;
@@ -103,13 +117,13 @@ html, body, #root, #App {
     margin: auto;
     font-size: 30px;
     font-family: var(--theFont);
-    color: var(--gunmetal);
+    color: var(--projectsPaneFontColor);
 }
 
 #skills {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
-    background-color: var(--orange-red);
+    background-color: var(--skillsPane);
     display: flex;
     width: 100%;
     height: 100%;
@@ -121,13 +135,13 @@ html, body, #root, #App {
     margin: auto;
     font-size: 30px;
     font-family: var(--theFont);
-    color: var(--green-cyan); 
+    color: var(--skillsPaneFontColor);
 }
 
 #experience {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    background-color: var(--dark-blue-gray);
+    background-color: var(--experiencePane);
     display: flex;
     width: 90%;
     margin-bottom: 0px;
@@ -140,14 +154,14 @@ html, body, #root, #App {
     margin: auto;
     font-size: 30px;
     font-family: var(--theFont);
-    color: var(--orange-red);
+    color: var(--experiencePaneFontColor);
 }
 
 #contact {
     /* box-sizing: border-box; */
     grid-column: 2 / 3;
     grid-row: 1 / 2;
-    background-color: var(--carolina-blue);
+    background-color: var(--contactPane);
     display: flex;
     width: 90%;
     margin-left: 5%;
@@ -161,7 +175,7 @@ html, body, #root, #App {
     margin: auto;
     font-size: 30px;
     font-family: var(--theFont);
-    color: var(--white);
+    color: var(--contactPaneFontColor);
 }
 
 /* .item:hover {
@@ -170,26 +184,18 @@ html, body, #root, #App {
 } */
 
 .buttons {
-    background-color: var(--carolina-blue);
+    background-color: var(--buttons);
     display: border-box;
     width: 100%;
     height: 100%;
     border: none;
     color: black;
     padding: 20px;
-    margin: 0px 0px ;
+    margin: 0px 0px;
     /* font-family: "impact"; */
     font-size: 100%;
     border-radius: 2%;
-    box-shadow: 5px 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 5px 8px 16px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
-
-#nameHeader {
-    font-size: 60px;
-    /* overflow:scroll; */
-    color: var(--dark-blue-gray);
-    margin: 0;
-    transform: rotate(0.25turn);
-}
